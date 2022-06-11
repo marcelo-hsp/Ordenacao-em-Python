@@ -1,7 +1,7 @@
-Desenvolvimento de um medido de tempo de execução de três métodos de ordenação em Python: 
+###Desenvolvimento de um medido de tempo de execução de três métodos de ordenação em Python: 
 
-- BubbleSort
-- InsertionSort
-- SelectionSort
+#- BubbleSort
+#- InsertionSort
+#- SelectionSort
 
-Linguagem de Programação: Python {biblioteca time.py}
+Linguagem de Programação: Python {bibliotecas: thread, time}

@@ -1,6 +1,5 @@
 from functools import partial
 from threading import Thread
-import time
 
 from listaAleatoria import listaAleatoria
 from Ordenacoes import bubble_sort, insertion_sort, selection_sort
