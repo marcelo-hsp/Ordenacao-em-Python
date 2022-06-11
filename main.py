@@ -4,21 +4,15 @@ import time
 
 from listaAleatoria import listaAleatoria
 from Ordenacoes import bubble_sort, insertion_sort, selection_sort
-
-def TempoDeExecucaoDeUmaThread(thr: Thread):
-    t1 = time.time()
-    thr.start()
-    t2 = time.time()
-    print(str(t2 - t1))
-
-lista = listaAleatoria()
-
-threadBubbleSort = Thread(target=partial(bubble_sort, lista))
-threadInsertionSort = Thread(target=partial(insertion_sort, lista))
-threadSelectionSort = Thread(target=partial(selection_sort, lista))
+from timerCalculator import TempoDeExecucaoDeUmaThread
 
 
-TempoDeExecucaoDeUmaThread(threadSelectionSort)
-TempoDeExecucaoDeUmaThread(threadInsertionSort)
-TempoDeExecucaoDeUmaThread(threadBubbleSort)
+if __name__ == "__main__":
+    lista = listaAleatoria()
+    threadBubbleSort = Thread(target=partial(bubble_sort, lista))
+    threadInsertionSort = Thread(target=partial(insertion_sort, lista))
+    threadSelectionSort = Thread(target=partial(selection_sort, lista))
+    TempoDeExecucaoDeUmaThread(threadSelectionSort)
+    TempoDeExecucaoDeUmaThread(threadInsertionSort)
+    TempoDeExecucaoDeUmaThread(threadBubbleSort)
 
