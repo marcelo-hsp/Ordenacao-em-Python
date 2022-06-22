@@ -21,7 +21,6 @@ if __name__ == "__main__":
         fileSelection.close()
     except FileNotFoundError:
         raise("Arquivo não encontrado!")
-    time.sleep(1)
     try:
         fileSelection = open("txtFiles/insertion.txt", "w")
         i = 0
@@ -32,7 +31,6 @@ if __name__ == "__main__":
         fileSelection.close()
     except FileNotFoundError:
         raise("Arquivo não encontrado!")
-    time.sleep(1)
     try:
         fileSelection = open("txtFiles/selection.txt", "w")
         i = 0
