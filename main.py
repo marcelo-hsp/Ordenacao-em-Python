@@ -1,13 +1,12 @@
 from functools import partial
 from threading import Thread
-import time
 
 from listaAleatoria import listaAleatoria
 from Ordenacoes import bubble_sort, insertion_sort, selection_sort
 from timerCalculator import TempoDeExecucaoDeUmaThread
 
 
-quantidadeDeExecuções = 10
+quantidadeDeExecuções = 1
 
 if __name__ == "__main__":
     lista = listaAleatoria() 
