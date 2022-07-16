@@ -1,8 +1,5 @@
 from random import *
 
-v_min = 40000
-v_max = 40000
-
 def listaAleatoria():
     try:
         lista_aleatoria = []
