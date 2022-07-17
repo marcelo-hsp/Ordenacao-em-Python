@@ -9,7 +9,20 @@ from timerCalculator import TempoDeExecucaoDeUmaThread
 quantidadeDeExecuções = 1
 
 if __name__ == "__main__":
-    lista = listaAleatoria() 
+    try:
+        file = open("./vetorDesordenado.txt", "r") ## r=read
+        lines = file.readlines()
+    except FileNotFoundError as error:
+        print("Erro1: Arquivo não encontrado: %s" % error)
+    except IOError as error:
+        print("Erro2: Erro de entrada e saída: %s" % error)
+    except Exception as ex:
+        print("Erro3: Erro inexperado: %s" % ex)
+
+    lista = []
+    for line in lines:
+        lista.append(int(line))
+    
     try:
         fileSelection = open("txtFiles/bubble.txt", "w")
         i = 0
